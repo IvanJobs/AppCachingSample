@@ -1,0 +1,28 @@
+{
+    "solution": {
+        "provisionSucceeded": true,
+        "teamsAppTenantId": "970d48f8-8647-4086-8a5f-3e76faeec4dd",
+        "subscriptionId": "1756abc0-3554-4341-8d6a-46674962ea19",
+        "subscriptionName": "Teams Cloud - Dev Test with TTL = 3 Days",
+        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "needCreateResourceGroup": true,
+        "resourceGroupName": "HelloWorldInMeetingApp1-dev-rg",
+        "location": "East US",
+        "resourceNameSuffix": "a5eb3e"
+    },
+    "fx-resource-appstudio": {
+        "tenantId": "970d48f8-8647-4086-8a5f-3e76faeec4dd",
+        "teamsAppId": "c5209d7b-2370-4042-a94f-bfc97adad48a"
+    },
+    "fx-resource-frontend-hosting": {
+        "indexPath": "/index.html#",
+        "domain": "inmeetingdeva5eb3etab.z13.web.core.windows.net",
+        "endpoint": "https://inmeetingdeva5eb3etab.z13.web.core.windows.net",
+        "storageResourceId": "/subscriptions/1756abc0-3554-4341-8d6a-46674962ea19/resourceGroups/HelloWorldInMeetingApp1-dev-rg/providers/Microsoft.Storage/storageAccounts/inmeetingdeva5eb3etab"
+    },
+    "fx-resource-identity": {
+        "identityName": "inmeetingdeva5eb3e",
+        "identityResourceId": "/subscriptions/1756abc0-3554-4341-8d6a-46674962ea19/resourceGroups/HelloWorldInMeetingApp1-dev-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/inmeetingdeva5eb3e",
+        "identityClientId": "ad6f4ebb-273c-4770-b3a6-155ab6f7b733"
+    }
+}
