@@ -1,0 +1,45 @@
+{
+    "appName": "Hello_World_In_Meeting_App",
+    "version": "2.1.0",
+    "isFromSample": true,
+    "solutionSettings": {
+        "name": "fx-solution-azure",
+        "version": "1.0.0",
+        "hostType": "Azure",
+        "azureResources": [],
+        "capabilities": [
+            "Tab"
+        ],
+        "activeResourcePlugins": [
+            "fx-resource-local-debug",
+            "fx-resource-appstudio",
+            "fx-resource-cicd",
+            "fx-resource-api-connector",
+            "fx-resource-frontend-hosting",
+            "fx-resource-identity"
+        ]
+    },
+    "programmingLanguage": "javascript",
+    "projectId": "12811e17-66cf-4e33-95ca-026439a36d07",
+    "components": [
+        {
+            "hosting": "azure-storage",
+            "name": "teams-tab",
+            "build": true,
+            "provision": true,
+            "folder": "tabs",
+            "sso": false,
+            "deploy": true
+        },
+        {
+            "name": "azure-storage",
+            "connections": [
+                "teams-tab"
+            ],
+            "provision": true
+        },
+        {
+            "name": "identity"
+        }
+    ]
+}
