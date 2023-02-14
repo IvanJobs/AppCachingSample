@@ -21,6 +21,9 @@ class Tab extends React.Component {
           meetingId: context.meeting.id,
           userName: context.user.userPrincipalName
         });
+        
+        // Notifies the frame that app initialization is successful and is ready for user interaction.
+        app.notifySuccess();
 
         // App caching is available only in context of meeting's side panel.
         if (context.page.frameContext === "sidePanel") {
