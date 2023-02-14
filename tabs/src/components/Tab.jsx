@@ -1,5 +1,5 @@
 import React from "react";
-import { app } from "@microsoft/teams-js";
+import { app, teamsCore } from "@microsoft/teams-js";
 import MediaQuery from 'react-responsive';
 import './App.css';
 
@@ -21,6 +21,20 @@ class Tab extends React.Component {
           meetingId: context.meeting.id,
           userName: context.user.userPrincipalName
         });
+
+        // App caching is available only in context of meeting's side panel.
+        if (context.page.frameContext === "sidePanel") {
+          teamsCore.registerBeforeUnloadHandler((readyToUnload: any) => {
+            // Dispose resources and notify readiness by invoking readyToUnload.
+            readyToUnload();
+            return true;
+          });
+
+          teamsCore.registerOnLoadHandler((context) => {
+            // Use context.contextUrl to route to the correct page.
+            app.notifySuccess();
+          });
+        }
       });
     });
     // Next steps: Error handling using the error object
